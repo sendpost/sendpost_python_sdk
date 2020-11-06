@@ -29,6 +29,12 @@ class TestAccountvalidationApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_validate_router_validate_email_bulk(self):
+        """Test case for validate_router_validate_email_bulk
+
+        """
+        pass
+
     def test_validation_router_count(self):
         """Test case for validation_router_count
 
@@ -43,6 +49,12 @@ class TestAccountvalidationApi(unittest.TestCase):
 
     def test_validation_router_get_all(self):
         """Test case for validation_router_get_all
+
+        """
+        pass
+
+    def test_validation_router_validate_email_list(self):
+        """Test case for validation_router_validate_email_list
 
         """
         pass

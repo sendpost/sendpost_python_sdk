@@ -33,32 +33,44 @@ class ModelsAccount(object):
     swagger_types = {
         'api_key': 'str',
         'created': 'int',
+        'current_email_service_provider': 'str',
         'id': 'int',
+        'industry': 'str',
         'lock_threshold': 'int',
         'locked': 'bool',
         'name': 'str',
+        'onboard_q_answered': 'bool',
+        'sending_volume_per_month': 'str',
         'url': 'str'
     }
 
     attribute_map = {
         'api_key': 'apiKey',
         'created': 'created',
+        'current_email_service_provider': 'currentEmailServiceProvider',
         'id': 'id',
+        'industry': 'industry',
         'lock_threshold': 'lock_threshold',
         'locked': 'locked',
         'name': 'name',
+        'onboard_q_answered': 'onboardQAnswered',
+        'sending_volume_per_month': 'sendingVolumePerMonth',
         'url': 'url'
     }
 
-    def __init__(self, api_key=None, created=None, id=None, lock_threshold=None, locked=None, name=None, url=None):  # noqa: E501
+    def __init__(self, api_key=None, created=None, current_email_service_provider=None, id=None, industry=None, lock_threshold=None, locked=None, name=None, onboard_q_answered=None, sending_volume_per_month=None, url=None):  # noqa: E501
         """ModelsAccount - a model defined in Swagger"""  # noqa: E501
 
         self._api_key = None
         self._created = None
+        self._current_email_service_provider = None
         self._id = None
+        self._industry = None
         self._lock_threshold = None
         self._locked = None
         self._name = None
+        self._onboard_q_answered = None
+        self._sending_volume_per_month = None
         self._url = None
         self.discriminator = None
 
@@ -66,14 +78,22 @@ class ModelsAccount(object):
             self.api_key = api_key
         if created is not None:
             self.created = created
+        if current_email_service_provider is not None:
+            self.current_email_service_provider = current_email_service_provider
         if id is not None:
             self.id = id
+        if industry is not None:
+            self.industry = industry
         if lock_threshold is not None:
             self.lock_threshold = lock_threshold
         if locked is not None:
             self.locked = locked
         if name is not None:
             self.name = name
+        if onboard_q_answered is not None:
+            self.onboard_q_answered = onboard_q_answered
+        if sending_volume_per_month is not None:
+            self.sending_volume_per_month = sending_volume_per_month
         if url is not None:
             self.url = url
 
@@ -120,6 +140,27 @@ class ModelsAccount(object):
         self._created = created
 
     @property
+    def current_email_service_provider(self):
+        """Gets the current_email_service_provider of this ModelsAccount.  # noqa: E501
+
+
+        :return: The current_email_service_provider of this ModelsAccount.  # noqa: E501
+        :rtype: str
+        """
+        return self._current_email_service_provider
+
+    @current_email_service_provider.setter
+    def current_email_service_provider(self, current_email_service_provider):
+        """Sets the current_email_service_provider of this ModelsAccount.
+
+
+        :param current_email_service_provider: The current_email_service_provider of this ModelsAccount.  # noqa: E501
+        :type: str
+        """
+
+        self._current_email_service_provider = current_email_service_provider
+
+    @property
     def id(self):
         """Gets the id of this ModelsAccount.  # noqa: E501
 
@@ -139,6 +180,27 @@ class ModelsAccount(object):
         """
 
         self._id = id
+
+    @property
+    def industry(self):
+        """Gets the industry of this ModelsAccount.  # noqa: E501
+
+
+        :return: The industry of this ModelsAccount.  # noqa: E501
+        :rtype: str
+        """
+        return self._industry
+
+    @industry.setter
+    def industry(self, industry):
+        """Sets the industry of this ModelsAccount.
+
+
+        :param industry: The industry of this ModelsAccount.  # noqa: E501
+        :type: str
+        """
+
+        self._industry = industry
 
     @property
     def lock_threshold(self):
@@ -202,6 +264,48 @@ class ModelsAccount(object):
         """
 
         self._name = name
+
+    @property
+    def onboard_q_answered(self):
+        """Gets the onboard_q_answered of this ModelsAccount.  # noqa: E501
+
+
+        :return: The onboard_q_answered of this ModelsAccount.  # noqa: E501
+        :rtype: bool
+        """
+        return self._onboard_q_answered
+
+    @onboard_q_answered.setter
+    def onboard_q_answered(self, onboard_q_answered):
+        """Sets the onboard_q_answered of this ModelsAccount.
+
+
+        :param onboard_q_answered: The onboard_q_answered of this ModelsAccount.  # noqa: E501
+        :type: bool
+        """
+
+        self._onboard_q_answered = onboard_q_answered
+
+    @property
+    def sending_volume_per_month(self):
+        """Gets the sending_volume_per_month of this ModelsAccount.  # noqa: E501
+
+
+        :return: The sending_volume_per_month of this ModelsAccount.  # noqa: E501
+        :rtype: str
+        """
+        return self._sending_volume_per_month
+
+    @sending_volume_per_month.setter
+    def sending_volume_per_month(self, sending_volume_per_month):
+        """Sets the sending_volume_per_month of this ModelsAccount.
+
+
+        :param sending_volume_per_month: The sending_volume_per_month of this ModelsAccount.  # noqa: E501
+        :type: str
+        """
+
+        self._sending_volume_per_month = sending_volume_per_month
 
     @property
     def url(self):

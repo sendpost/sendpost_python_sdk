@@ -139,11 +139,11 @@ Class | Method | HTTP request | Description
 *AccountsubaccountApi* | [**sub_account_router_get**](docs/AccountsubaccountApi.md#sub_account_router_get) | **GET** /account/subaccount/{subAccountId} | 
 *AccountsubaccountApi* | [**sub_account_router_get_all**](docs/AccountsubaccountApi.md#sub_account_router_get_all) | **GET** /account/subaccount/ | 
 *AccountsubaccountApi* | [**sub_account_router_update**](docs/AccountsubaccountApi.md#sub_account_router_update) | **PUT** /account/subaccount/{subAccountId} | 
-*AccountvalidateApi* | [**validate_router_validate_email_bulk**](docs/AccountvalidateApi.md#validate_router_validate_email_bulk) | **POST** /account/validate/bulk | 
-*AccountvalidateApi* | [**validate_router_validate_email_list**](docs/AccountvalidateApi.md#validate_router_validate_email_list) | **POST** /account/validate/ | 
+*AccountvalidationApi* | [**validate_router_validate_email_bulk**](docs/AccountvalidationApi.md#validate_router_validate_email_bulk) | **POST** /account/validation/bulk | 
 *AccountvalidationApi* | [**validation_router_count**](docs/AccountvalidationApi.md#validation_router_count) | **GET** /account/validation/count | 
 *AccountvalidationApi* | [**validation_router_delete_validation**](docs/AccountvalidationApi.md#validation_router_delete_validation) | **DELETE** /account/validation/ | 
 *AccountvalidationApi* | [**validation_router_get_all**](docs/AccountvalidationApi.md#validation_router_get_all) | **GET** /account/validation/ | 
+*AccountvalidationApi* | [**validation_router_validate_email_list**](docs/AccountvalidationApi.md#validation_router_validate_email_list) | **POST** /account/validation/ | 
 *AccountwebhookApi* | [**account_webhook_router_count**](docs/AccountwebhookApi.md#account_webhook_router_count) | **GET** /account/webhook/count | 
 *AccountwebhookApi* | [**account_webhook_router_create**](docs/AccountwebhookApi.md#account_webhook_router_create) | **POST** /account/webhook/ | 
 *AccountwebhookApi* | [**account_webhook_router_create_account_webhook_in_account_webhook_cache**](docs/AccountwebhookApi.md#account_webhook_router_create_account_webhook_in_account_webhook_cache) | **POST** /account/webhook/cache | 
@@ -214,6 +214,7 @@ Class | Method | HTTP request | Description
  - [ModelsDetailedAlert](docs/ModelsDetailedAlert.md)
  - [ModelsDomain](docs/ModelsDomain.md)
  - [ModelsEAccount](docs/ModelsEAccount.md)
+ - [ModelsEAccountMember](docs/ModelsEAccountMember.md)
  - [ModelsEDomain](docs/ModelsEDomain.md)
  - [ModelsEIP](docs/ModelsEIP.md)
  - [ModelsEIPPool](docs/ModelsEIPPool.md)

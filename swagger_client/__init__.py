@@ -28,7 +28,6 @@ from swagger_client.api.accountrecipient_api import AccountrecipientApi
 from swagger_client.api.accountsmtpstat_api import AccountsmtpstatApi
 from swagger_client.api.accountstat_api import AccountstatApi
 from swagger_client.api.accountsubaccount_api import AccountsubaccountApi
-from swagger_client.api.accountvalidate_api import AccountvalidateApi
 from swagger_client.api.accountvalidation_api import AccountvalidationApi
 from swagger_client.api.accountwebhook_api import AccountwebhookApi
 from swagger_client.api.smtp_api import SmtpApi
@@ -66,6 +65,7 @@ from swagger_client.models.models_delete_response import ModelsDeleteResponse
 from swagger_client.models.models_detailed_alert import ModelsDetailedAlert
 from swagger_client.models.models_domain import ModelsDomain
 from swagger_client.models.models_e_account import ModelsEAccount
+from swagger_client.models.models_e_account_member import ModelsEAccountMember
 from swagger_client.models.models_e_domain import ModelsEDomain
 from swagger_client.models.models_eip import ModelsEIP
 from swagger_client.models.models_eip_pool import ModelsEIPPool

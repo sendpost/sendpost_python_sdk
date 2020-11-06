@@ -35,7 +35,10 @@ class ModelsMember(object):
         'id': 'int',
         'is_forbidden': 'bool',
         'is_verified': 'bool',
-        'created': 'int'
+        'company_name': 'str',
+        'created': 'int',
+        'name': 'str',
+        'phone_number': 'str'
     }
 
     attribute_map = {
@@ -43,17 +46,23 @@ class ModelsMember(object):
         'id': 'Id',
         'is_forbidden': 'IsForbidden',
         'is_verified': 'IsVerified',
-        'created': 'created'
+        'company_name': 'companyName',
+        'created': 'created',
+        'name': 'name',
+        'phone_number': 'phoneNumber'
     }
 
-    def __init__(self, email=None, id=None, is_forbidden=None, is_verified=None, created=None):  # noqa: E501
+    def __init__(self, email=None, id=None, is_forbidden=None, is_verified=None, company_name=None, created=None, name=None, phone_number=None):  # noqa: E501
         """ModelsMember - a model defined in Swagger"""  # noqa: E501
 
         self._email = None
         self._id = None
         self._is_forbidden = None
         self._is_verified = None
+        self._company_name = None
         self._created = None
+        self._name = None
+        self._phone_number = None
         self.discriminator = None
 
         if email is not None:
@@ -64,8 +73,14 @@ class ModelsMember(object):
             self.is_forbidden = is_forbidden
         if is_verified is not None:
             self.is_verified = is_verified
+        if company_name is not None:
+            self.company_name = company_name
         if created is not None:
             self.created = created
+        if name is not None:
+            self.name = name
+        if phone_number is not None:
+            self.phone_number = phone_number
 
     @property
     def email(self):
@@ -152,6 +167,27 @@ class ModelsMember(object):
         self._is_verified = is_verified
 
     @property
+    def company_name(self):
+        """Gets the company_name of this ModelsMember.  # noqa: E501
+
+
+        :return: The company_name of this ModelsMember.  # noqa: E501
+        :rtype: str
+        """
+        return self._company_name
+
+    @company_name.setter
+    def company_name(self, company_name):
+        """Sets the company_name of this ModelsMember.
+
+
+        :param company_name: The company_name of this ModelsMember.  # noqa: E501
+        :type: str
+        """
+
+        self._company_name = company_name
+
+    @property
     def created(self):
         """Gets the created of this ModelsMember.  # noqa: E501
 
@@ -171,6 +207,48 @@ class ModelsMember(object):
         """
 
         self._created = created
+
+    @property
+    def name(self):
+        """Gets the name of this ModelsMember.  # noqa: E501
+
+
+        :return: The name of this ModelsMember.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this ModelsMember.
+
+
+        :param name: The name of this ModelsMember.  # noqa: E501
+        :type: str
+        """
+
+        self._name = name
+
+    @property
+    def phone_number(self):
+        """Gets the phone_number of this ModelsMember.  # noqa: E501
+
+
+        :return: The phone_number of this ModelsMember.  # noqa: E501
+        :rtype: str
+        """
+        return self._phone_number
+
+    @phone_number.setter
+    def phone_number(self, phone_number):
+        """Sets the phone_number of this ModelsMember.
+
+
+        :param phone_number: The phone_number of this ModelsMember.  # noqa: E501
+        :type: str
+        """
+
+        self._phone_number = phone_number
 
     def to_dict(self):
         """Returns the model properties as a dict"""

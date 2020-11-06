@@ -15,7 +15,6 @@ from swagger_client.api.accountrecipient_api import AccountrecipientApi
 from swagger_client.api.accountsmtpstat_api import AccountsmtpstatApi
 from swagger_client.api.accountstat_api import AccountstatApi
 from swagger_client.api.accountsubaccount_api import AccountsubaccountApi
-from swagger_client.api.accountvalidate_api import AccountvalidateApi
 from swagger_client.api.accountvalidation_api import AccountvalidationApi
 from swagger_client.api.accountwebhook_api import AccountwebhookApi
 from swagger_client.api.smtp_api import SmtpApi

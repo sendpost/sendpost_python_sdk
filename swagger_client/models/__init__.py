@@ -38,6 +38,7 @@ from swagger_client.models.models_delete_response import ModelsDeleteResponse
 from swagger_client.models.models_detailed_alert import ModelsDetailedAlert
 from swagger_client.models.models_domain import ModelsDomain
 from swagger_client.models.models_e_account import ModelsEAccount
+from swagger_client.models.models_e_account_member import ModelsEAccountMember
 from swagger_client.models.models_e_domain import ModelsEDomain
 from swagger_client.models.models_eip import ModelsEIP
 from swagger_client.models.models_eip_pool import ModelsEIPPool

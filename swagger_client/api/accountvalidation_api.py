@@ -33,6 +33,113 @@ class AccountvalidationApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
+    def validate_router_validate_email_bulk(self, fileinput, x_account_api_key, **kwargs):  # noqa: E501
+        """validate_router_validate_email_bulk  # noqa: E501
+
+        Validate Emails In File Asynchronously  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.validate_router_validate_email_bulk(fileinput, x_account_api_key, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param file fileinput: CSV whose emails need to be validated (required)
+        :param str x_account_api_key: Account API Key (required)
+        :return: ModelsBulkResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.validate_router_validate_email_bulk_with_http_info(fileinput, x_account_api_key, **kwargs)  # noqa: E501
+        else:
+            (data) = self.validate_router_validate_email_bulk_with_http_info(fileinput, x_account_api_key, **kwargs)  # noqa: E501
+            return data
+
+    def validate_router_validate_email_bulk_with_http_info(self, fileinput, x_account_api_key, **kwargs):  # noqa: E501
+        """validate_router_validate_email_bulk  # noqa: E501
+
+        Validate Emails In File Asynchronously  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.validate_router_validate_email_bulk_with_http_info(fileinput, x_account_api_key, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param file fileinput: CSV whose emails need to be validated (required)
+        :param str x_account_api_key: Account API Key (required)
+        :return: ModelsBulkResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['fileinput', 'x_account_api_key']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method validate_router_validate_email_bulk" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'fileinput' is set
+        if ('fileinput' not in params or
+                params['fileinput'] is None):
+            raise ValueError("Missing the required parameter `fileinput` when calling `validate_router_validate_email_bulk`")  # noqa: E501
+        # verify the required parameter 'x_account_api_key' is set
+        if ('x_account_api_key' not in params or
+                params['x_account_api_key'] is None):
+            raise ValueError("Missing the required parameter `x_account_api_key` when calling `validate_router_validate_email_bulk`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+        if 'x_account_api_key' in params:
+            header_params['X-Account-ApiKey'] = params['x_account_api_key']  # noqa: E501
+
+        form_params = []
+        local_var_files = {}
+        if 'fileinput' in params:
+            local_var_files['fileinput'] = params['fileinput']  # noqa: E501
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['multipart/form-data'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = []  # noqa: E501
+
+        return self.api_client.call_api(
+            '/account/validation/bulk', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ModelsBulkResponse',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def validation_router_count(self, x_account_api_key, **kwargs):  # noqa: E501
         """validation_router_count  # noqa: E501
 
@@ -343,6 +450,113 @@ class AccountvalidationApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='list[ModelsValidation]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def validation_router_validate_email_list(self, x_account_api_key, body, **kwargs):  # noqa: E501
+        """validation_router_validate_email_list  # noqa: E501
+
+        Validate Email List Synchronously  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.validation_router_validate_email_list(x_account_api_key, body, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str x_account_api_key: Account API Key (required)
+        :param ModelsEmailList body: The email list to be sent for being validated (required)
+        :return: ModelsCleanedList
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.validation_router_validate_email_list_with_http_info(x_account_api_key, body, **kwargs)  # noqa: E501
+        else:
+            (data) = self.validation_router_validate_email_list_with_http_info(x_account_api_key, body, **kwargs)  # noqa: E501
+            return data
+
+    def validation_router_validate_email_list_with_http_info(self, x_account_api_key, body, **kwargs):  # noqa: E501
+        """validation_router_validate_email_list  # noqa: E501
+
+        Validate Email List Synchronously  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.validation_router_validate_email_list_with_http_info(x_account_api_key, body, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str x_account_api_key: Account API Key (required)
+        :param ModelsEmailList body: The email list to be sent for being validated (required)
+        :return: ModelsCleanedList
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['x_account_api_key', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method validation_router_validate_email_list" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'x_account_api_key' is set
+        if ('x_account_api_key' not in params or
+                params['x_account_api_key'] is None):
+            raise ValueError("Missing the required parameter `x_account_api_key` when calling `validation_router_validate_email_list`")  # noqa: E501
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `validation_router_validate_email_list`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+        if 'x_account_api_key' in params:
+            header_params['X-Account-ApiKey'] = params['x_account_api_key']  # noqa: E501
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = []  # noqa: E501
+
+        return self.api_client.call_api(
+            '/account/validation/', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ModelsCleanedList',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
