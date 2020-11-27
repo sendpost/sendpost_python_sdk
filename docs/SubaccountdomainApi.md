@@ -11,6 +11,8 @@ Method | HTTP request | Description
 [**domain_router_get_all**](SubaccountdomainApi.md#domain_router_get_all) | **GET** /subaccount/domain/ | 
 [**domain_router_update**](SubaccountdomainApi.md#domain_router_update) | **PUT** /subaccount/domain/{domainId} | 
 [**domain_router_verify**](SubaccountdomainApi.md#domain_router_verify) | **POST** /subaccount/domain/{domainId}/verify | 
+[**domain_router_verify_by_token**](SubaccountdomainApi.md#domain_router_verify_by_token) | **POST** /subaccount/domain/{domainId}/verify/email/{token} | 
+[**domain_router_verify_request**](SubaccountdomainApi.md#domain_router_verify_request) | **POST** /subaccount/domain/{domainId}/verify/email | 
 
 
 # **domain_router_count**
@@ -348,6 +350,107 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ModelsDomain**](ModelsDomain.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **domain_router_verify_by_token**
+> ModelsDomain domain_router_verify_by_token(x_sub_account_api_key, domain_id, token)
+
+
+
+Verify Domain By Signed Token
+
+### Example
+```python
+from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SubaccountdomainApi()
+x_sub_account_api_key = 'x_sub_account_api_key_example' # str | Sub-Account API Key
+domain_id = 789 # int | the DomainId you want to get
+token = 'token_example' # str | The signed token used to verify
+
+try:
+    api_response = api_instance.domain_router_verify_by_token(x_sub_account_api_key, domain_id, token)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling SubaccountdomainApi->domain_router_verify_by_token: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **x_sub_account_api_key** | **str**| Sub-Account API Key | 
+ **domain_id** | **int**| the DomainId you want to get | 
+ **token** | **str**| The signed token used to verify | 
+
+### Return type
+
+[**ModelsDomain**](ModelsDomain.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **domain_router_verify_request**
+> domain_router_verify_request(x_sub_account_api_key, domain_id, body)
+
+
+
+Verify Domain By Email Request
+
+### Example
+```python
+from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.SubaccountdomainApi()
+x_sub_account_api_key = 'x_sub_account_api_key_example' # str | Sub-Account API Key
+domain_id = 789 # int | the DomainId you want to get
+body = swagger_client.ModelsVerifyByTokenRequest() # ModelsVerifyByTokenRequest | The Email to be used to verify
+
+try:
+    api_instance.domain_router_verify_request(x_sub_account_api_key, domain_id, body)
+except ApiException as e:
+    print("Exception when calling SubaccountdomainApi->domain_router_verify_request: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **x_sub_account_api_key** | **str**| Sub-Account API Key | 
+ **domain_id** | **int**| the DomainId you want to get | 
+ **body** | [**ModelsVerifyByTokenRequest**](ModelsVerifyByTokenRequest.md)| The Email to be used to verify | 
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 

@@ -41,20 +41,8 @@ class TestAccountwebhookApi(unittest.TestCase):
         """
         pass
 
-    def test_account_webhook_router_create_account_webhook_in_account_webhook_cache(self):
-        """Test case for account_webhook_router_create_account_webhook_in_account_webhook_cache
-
-        """
-        pass
-
     def test_account_webhook_router_delete(self):
         """Test case for account_webhook_router_delete
-
-        """
-        pass
-
-    def test_account_webhook_router_delete_account_webhook_in_account_webhook_cache(self):
-        """Test case for account_webhook_router_delete_account_webhook_in_account_webhook_cache
 
         """
         pass

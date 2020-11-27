@@ -34,7 +34,9 @@ class ModelsEAccountMember(object):
         'company_name': 'str',
         'current_email_service_provider': 'str',
         'industry': 'str',
+        'logo_url': 'str',
         'name': 'str',
+        'onboard_c_finished': 'bool',
         'onboard_q_answered': 'bool',
         'phone_number': 'str',
         'sending_volume_per_month': 'str',
@@ -46,7 +48,9 @@ class ModelsEAccountMember(object):
         'company_name': 'companyName',
         'current_email_service_provider': 'currentEmailServiceProvider',
         'industry': 'industry',
+        'logo_url': 'logoURL',
         'name': 'name',
+        'onboard_c_finished': 'onboardCFinished',
         'onboard_q_answered': 'onboardQAnswered',
         'phone_number': 'phoneNumber',
         'sending_volume_per_month': 'sendingVolumePerMonth',
@@ -54,13 +58,15 @@ class ModelsEAccountMember(object):
         'verify_email': 'verifyEmail'
     }
 
-    def __init__(self, company_name=None, current_email_service_provider=None, industry=None, name=None, onboard_q_answered=None, phone_number=None, sending_volume_per_month=None, uid=None, verify_email=None):  # noqa: E501
+    def __init__(self, company_name=None, current_email_service_provider=None, industry=None, logo_url=None, name=None, onboard_c_finished=None, onboard_q_answered=None, phone_number=None, sending_volume_per_month=None, uid=None, verify_email=None):  # noqa: E501
         """ModelsEAccountMember - a model defined in Swagger"""  # noqa: E501
 
         self._company_name = None
         self._current_email_service_provider = None
         self._industry = None
+        self._logo_url = None
         self._name = None
+        self._onboard_c_finished = None
         self._onboard_q_answered = None
         self._phone_number = None
         self._sending_volume_per_month = None
@@ -74,8 +80,12 @@ class ModelsEAccountMember(object):
             self.current_email_service_provider = current_email_service_provider
         if industry is not None:
             self.industry = industry
+        if logo_url is not None:
+            self.logo_url = logo_url
         if name is not None:
             self.name = name
+        if onboard_c_finished is not None:
+            self.onboard_c_finished = onboard_c_finished
         if onboard_q_answered is not None:
             self.onboard_q_answered = onboard_q_answered
         if phone_number is not None:
@@ -151,6 +161,27 @@ class ModelsEAccountMember(object):
         self._industry = industry
 
     @property
+    def logo_url(self):
+        """Gets the logo_url of this ModelsEAccountMember.  # noqa: E501
+
+
+        :return: The logo_url of this ModelsEAccountMember.  # noqa: E501
+        :rtype: str
+        """
+        return self._logo_url
+
+    @logo_url.setter
+    def logo_url(self, logo_url):
+        """Sets the logo_url of this ModelsEAccountMember.
+
+
+        :param logo_url: The logo_url of this ModelsEAccountMember.  # noqa: E501
+        :type: str
+        """
+
+        self._logo_url = logo_url
+
+    @property
     def name(self):
         """Gets the name of this ModelsEAccountMember.  # noqa: E501
 
@@ -170,6 +201,27 @@ class ModelsEAccountMember(object):
         """
 
         self._name = name
+
+    @property
+    def onboard_c_finished(self):
+        """Gets the onboard_c_finished of this ModelsEAccountMember.  # noqa: E501
+
+
+        :return: The onboard_c_finished of this ModelsEAccountMember.  # noqa: E501
+        :rtype: bool
+        """
+        return self._onboard_c_finished
+
+    @onboard_c_finished.setter
+    def onboard_c_finished(self, onboard_c_finished):
+        """Sets the onboard_c_finished of this ModelsEAccountMember.
+
+
+        :param onboard_c_finished: The onboard_c_finished of this ModelsEAccountMember.  # noqa: E501
+        :type: bool
+        """
+
+        self._onboard_c_finished = onboard_c_finished
 
     @property
     def onboard_q_answered(self):

@@ -35,6 +35,12 @@ class TestSubaccountemailApi(unittest.TestCase):
         """
         pass
 
+    def test_email_router_send_email_with_template(self):
+        """Test case for email_router_send_email_with_template
+
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()

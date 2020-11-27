@@ -6,9 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**account_webhook_router_count**](AccountwebhookApi.md#account_webhook_router_count) | **GET** /account/webhook/count | 
 [**account_webhook_router_create**](AccountwebhookApi.md#account_webhook_router_create) | **POST** /account/webhook/ | 
-[**account_webhook_router_create_account_webhook_in_account_webhook_cache**](AccountwebhookApi.md#account_webhook_router_create_account_webhook_in_account_webhook_cache) | **POST** /account/webhook/cache | 
 [**account_webhook_router_delete**](AccountwebhookApi.md#account_webhook_router_delete) | **DELETE** /account/webhook/{webhookId} | 
-[**account_webhook_router_delete_account_webhook_in_account_webhook_cache**](AccountwebhookApi.md#account_webhook_router_delete_account_webhook_in_account_webhook_cache) | **DELETE** /account/webhook/cache | 
 [**account_webhook_router_get**](AccountwebhookApi.md#account_webhook_router_get) | **GET** /account/webhook/{webhookId} | 
 [**account_webhook_router_get_all**](AccountwebhookApi.md#account_webhook_router_get_all) | **GET** /account/webhook/ | 
 [**account_webhook_router_update**](AccountwebhookApi.md#account_webhook_router_update) | **PUT** /account/webhook/{webhookId} | 
@@ -110,52 +108,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **account_webhook_router_create_account_webhook_in_account_webhook_cache**
-> account_webhook_router_create_account_webhook_in_account_webhook_cache(body)
-
-
-
-Add Account Webhook To AccountWebhook Cache
-
-### Example
-```python
-from __future__ import print_function
-import time
-import swagger_client
-from swagger_client.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = swagger_client.AccountwebhookApi()
-body = swagger_client.ModelsAccountWebhook() # ModelsAccountWebhook | Add account webhook to cache
-
-try:
-    api_instance.account_webhook_router_create_account_webhook_in_account_webhook_cache(body)
-except ApiException as e:
-    print("Exception when calling AccountwebhookApi->account_webhook_router_create_account_webhook_in_account_webhook_cache: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**ModelsAccountWebhook**](ModelsAccountWebhook.md)| Add account webhook to cache | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **account_webhook_router_delete**
 > ModelsDeleteResponse account_webhook_router_delete(x_account_api_key, webhook_id)
 
@@ -193,52 +145,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ModelsDeleteResponse**](ModelsDeleteResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **account_webhook_router_delete_account_webhook_in_account_webhook_cache**
-> account_webhook_router_delete_account_webhook_in_account_webhook_cache(body)
-
-
-
-Delete Account Webhook which is in AccountWebhook Cache
-
-### Example
-```python
-from __future__ import print_function
-import time
-import swagger_client
-from swagger_client.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = swagger_client.AccountwebhookApi()
-body = swagger_client.ModelsAccountWebhook() # ModelsAccountWebhook | AccountWebhook content
-
-try:
-    api_instance.account_webhook_router_delete_account_webhook_in_account_webhook_cache(body)
-except ApiException as e:
-    print("Exception when calling AccountwebhookApi->account_webhook_router_delete_account_webhook_in_account_webhook_cache: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**ModelsAccountWebhook**](ModelsAccountWebhook.md)| AccountWebhook content | 
-
-### Return type
-
-void (empty response body)
 
 ### Authorization
 

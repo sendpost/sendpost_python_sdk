@@ -36,9 +36,13 @@ class ModelsAccount(object):
         'current_email_service_provider': 'str',
         'id': 'int',
         'industry': 'str',
+        'is_canceled': 'bool',
+        'is_last_payment_failed': 'bool',
+        'is_upgraded': 'bool',
         'lock_threshold': 'int',
         'locked': 'bool',
         'name': 'str',
+        'onboard_c_finished': 'bool',
         'onboard_q_answered': 'bool',
         'sending_volume_per_month': 'str',
         'url': 'str'
@@ -50,15 +54,19 @@ class ModelsAccount(object):
         'current_email_service_provider': 'currentEmailServiceProvider',
         'id': 'id',
         'industry': 'industry',
-        'lock_threshold': 'lock_threshold',
+        'is_canceled': 'isCanceled',
+        'is_last_payment_failed': 'isLastPaymentFailed',
+        'is_upgraded': 'isUpgraded',
+        'lock_threshold': 'lockThreshold',
         'locked': 'locked',
         'name': 'name',
+        'onboard_c_finished': 'onboardCFinished',
         'onboard_q_answered': 'onboardQAnswered',
         'sending_volume_per_month': 'sendingVolumePerMonth',
         'url': 'url'
     }
 
-    def __init__(self, api_key=None, created=None, current_email_service_provider=None, id=None, industry=None, lock_threshold=None, locked=None, name=None, onboard_q_answered=None, sending_volume_per_month=None, url=None):  # noqa: E501
+    def __init__(self, api_key=None, created=None, current_email_service_provider=None, id=None, industry=None, is_canceled=None, is_last_payment_failed=None, is_upgraded=None, lock_threshold=None, locked=None, name=None, onboard_c_finished=None, onboard_q_answered=None, sending_volume_per_month=None, url=None):  # noqa: E501
         """ModelsAccount - a model defined in Swagger"""  # noqa: E501
 
         self._api_key = None
@@ -66,9 +74,13 @@ class ModelsAccount(object):
         self._current_email_service_provider = None
         self._id = None
         self._industry = None
+        self._is_canceled = None
+        self._is_last_payment_failed = None
+        self._is_upgraded = None
         self._lock_threshold = None
         self._locked = None
         self._name = None
+        self._onboard_c_finished = None
         self._onboard_q_answered = None
         self._sending_volume_per_month = None
         self._url = None
@@ -84,12 +96,20 @@ class ModelsAccount(object):
             self.id = id
         if industry is not None:
             self.industry = industry
+        if is_canceled is not None:
+            self.is_canceled = is_canceled
+        if is_last_payment_failed is not None:
+            self.is_last_payment_failed = is_last_payment_failed
+        if is_upgraded is not None:
+            self.is_upgraded = is_upgraded
         if lock_threshold is not None:
             self.lock_threshold = lock_threshold
         if locked is not None:
             self.locked = locked
         if name is not None:
             self.name = name
+        if onboard_c_finished is not None:
+            self.onboard_c_finished = onboard_c_finished
         if onboard_q_answered is not None:
             self.onboard_q_answered = onboard_q_answered
         if sending_volume_per_month is not None:
@@ -203,6 +223,69 @@ class ModelsAccount(object):
         self._industry = industry
 
     @property
+    def is_canceled(self):
+        """Gets the is_canceled of this ModelsAccount.  # noqa: E501
+
+
+        :return: The is_canceled of this ModelsAccount.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_canceled
+
+    @is_canceled.setter
+    def is_canceled(self, is_canceled):
+        """Sets the is_canceled of this ModelsAccount.
+
+
+        :param is_canceled: The is_canceled of this ModelsAccount.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_canceled = is_canceled
+
+    @property
+    def is_last_payment_failed(self):
+        """Gets the is_last_payment_failed of this ModelsAccount.  # noqa: E501
+
+
+        :return: The is_last_payment_failed of this ModelsAccount.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_last_payment_failed
+
+    @is_last_payment_failed.setter
+    def is_last_payment_failed(self, is_last_payment_failed):
+        """Sets the is_last_payment_failed of this ModelsAccount.
+
+
+        :param is_last_payment_failed: The is_last_payment_failed of this ModelsAccount.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_last_payment_failed = is_last_payment_failed
+
+    @property
+    def is_upgraded(self):
+        """Gets the is_upgraded of this ModelsAccount.  # noqa: E501
+
+
+        :return: The is_upgraded of this ModelsAccount.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_upgraded
+
+    @is_upgraded.setter
+    def is_upgraded(self, is_upgraded):
+        """Sets the is_upgraded of this ModelsAccount.
+
+
+        :param is_upgraded: The is_upgraded of this ModelsAccount.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_upgraded = is_upgraded
+
+    @property
     def lock_threshold(self):
         """Gets the lock_threshold of this ModelsAccount.  # noqa: E501
 
@@ -264,6 +347,27 @@ class ModelsAccount(object):
         """
 
         self._name = name
+
+    @property
+    def onboard_c_finished(self):
+        """Gets the onboard_c_finished of this ModelsAccount.  # noqa: E501
+
+
+        :return: The onboard_c_finished of this ModelsAccount.  # noqa: E501
+        :rtype: bool
+        """
+        return self._onboard_c_finished
+
+    @onboard_c_finished.setter
+    def onboard_c_finished(self, onboard_c_finished):
+        """Sets the onboard_c_finished of this ModelsAccount.
+
+
+        :param onboard_c_finished: The onboard_c_finished of this ModelsAccount.  # noqa: E501
+        :type: bool
+        """
+
+        self._onboard_c_finished = onboard_c_finished
 
     @property
     def onboard_q_answered(self):

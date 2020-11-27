@@ -785,3 +785,233 @@ class SubaccountdomainApi(object):
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
+
+    def domain_router_verify_by_token(self, x_sub_account_api_key, domain_id, token, **kwargs):  # noqa: E501
+        """domain_router_verify_by_token  # noqa: E501
+
+        Verify Domain By Signed Token  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.domain_router_verify_by_token(x_sub_account_api_key, domain_id, token, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str x_sub_account_api_key: Sub-Account API Key (required)
+        :param int domain_id: the DomainId you want to get (required)
+        :param str token: The signed token used to verify (required)
+        :return: ModelsDomain
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.domain_router_verify_by_token_with_http_info(x_sub_account_api_key, domain_id, token, **kwargs)  # noqa: E501
+        else:
+            (data) = self.domain_router_verify_by_token_with_http_info(x_sub_account_api_key, domain_id, token, **kwargs)  # noqa: E501
+            return data
+
+    def domain_router_verify_by_token_with_http_info(self, x_sub_account_api_key, domain_id, token, **kwargs):  # noqa: E501
+        """domain_router_verify_by_token  # noqa: E501
+
+        Verify Domain By Signed Token  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.domain_router_verify_by_token_with_http_info(x_sub_account_api_key, domain_id, token, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str x_sub_account_api_key: Sub-Account API Key (required)
+        :param int domain_id: the DomainId you want to get (required)
+        :param str token: The signed token used to verify (required)
+        :return: ModelsDomain
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['x_sub_account_api_key', 'domain_id', 'token']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method domain_router_verify_by_token" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'x_sub_account_api_key' is set
+        if ('x_sub_account_api_key' not in params or
+                params['x_sub_account_api_key'] is None):
+            raise ValueError("Missing the required parameter `x_sub_account_api_key` when calling `domain_router_verify_by_token`")  # noqa: E501
+        # verify the required parameter 'domain_id' is set
+        if ('domain_id' not in params or
+                params['domain_id'] is None):
+            raise ValueError("Missing the required parameter `domain_id` when calling `domain_router_verify_by_token`")  # noqa: E501
+        # verify the required parameter 'token' is set
+        if ('token' not in params or
+                params['token'] is None):
+            raise ValueError("Missing the required parameter `token` when calling `domain_router_verify_by_token`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'domain_id' in params:
+            path_params['domainId'] = params['domain_id']  # noqa: E501
+        if 'token' in params:
+            path_params['token'] = params['token']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+        if 'x_sub_account_api_key' in params:
+            header_params['X-SubAccount-ApiKey'] = params['x_sub_account_api_key']  # noqa: E501
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = []  # noqa: E501
+
+        return self.api_client.call_api(
+            '/subaccount/domain/{domainId}/verify/email/{token}', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ModelsDomain',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def domain_router_verify_request(self, x_sub_account_api_key, domain_id, body, **kwargs):  # noqa: E501
+        """domain_router_verify_request  # noqa: E501
+
+        Verify Domain By Email Request  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.domain_router_verify_request(x_sub_account_api_key, domain_id, body, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str x_sub_account_api_key: Sub-Account API Key (required)
+        :param int domain_id: the DomainId you want to get (required)
+        :param ModelsVerifyByTokenRequest body: The Email to be used to verify (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.domain_router_verify_request_with_http_info(x_sub_account_api_key, domain_id, body, **kwargs)  # noqa: E501
+        else:
+            (data) = self.domain_router_verify_request_with_http_info(x_sub_account_api_key, domain_id, body, **kwargs)  # noqa: E501
+            return data
+
+    def domain_router_verify_request_with_http_info(self, x_sub_account_api_key, domain_id, body, **kwargs):  # noqa: E501
+        """domain_router_verify_request  # noqa: E501
+
+        Verify Domain By Email Request  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.domain_router_verify_request_with_http_info(x_sub_account_api_key, domain_id, body, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str x_sub_account_api_key: Sub-Account API Key (required)
+        :param int domain_id: the DomainId you want to get (required)
+        :param ModelsVerifyByTokenRequest body: The Email to be used to verify (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['x_sub_account_api_key', 'domain_id', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method domain_router_verify_request" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'x_sub_account_api_key' is set
+        if ('x_sub_account_api_key' not in params or
+                params['x_sub_account_api_key'] is None):
+            raise ValueError("Missing the required parameter `x_sub_account_api_key` when calling `domain_router_verify_request`")  # noqa: E501
+        # verify the required parameter 'domain_id' is set
+        if ('domain_id' not in params or
+                params['domain_id'] is None):
+            raise ValueError("Missing the required parameter `domain_id` when calling `domain_router_verify_request`")  # noqa: E501
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `domain_router_verify_request`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'domain_id' in params:
+            path_params['domainId'] = params['domain_id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+        if 'x_sub_account_api_key' in params:
+            header_params['X-SubAccount-ApiKey'] = params['x_sub_account_api_key']  # noqa: E501
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = []  # noqa: E501
+
+        return self.api_client.call_api(
+            '/subaccount/domain/{domainId}/verify/email', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)

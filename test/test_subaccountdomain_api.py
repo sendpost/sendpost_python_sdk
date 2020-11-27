@@ -71,6 +71,18 @@ class TestSubaccountdomainApi(unittest.TestCase):
         """
         pass
 
+    def test_domain_router_verify_by_token(self):
+        """Test case for domain_router_verify_by_token
+
+        """
+        pass
+
+    def test_domain_router_verify_request(self):
+        """Test case for domain_router_verify_request
+
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()

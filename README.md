@@ -81,6 +81,13 @@ Class | Method | HTTP request | Description
 *AccounteventApi* | [**event_router_get_all_event_timestamp_keys_of_a_sub_account_from_a_specific_node_for_a_given_time_range**](docs/AccounteventApi.md#event_router_get_all_event_timestamp_keys_of_a_sub_account_from_a_specific_node_for_a_given_time_range) | **GET** /account/event/node/timestampkeys | 
 *AccounteventApi* | [**event_router_get_all_events_of_a_account_from_a_specific_node**](docs/AccounteventApi.md#event_router_get_all_events_of_a_account_from_a_specific_node) | **POST** /account/event/node | 
 *AccounteventApi* | [**event_router_get_event_in_node**](docs/AccounteventApi.md#event_router_get_event_in_node) | **GET** /account/event/node/{eventId} | 
+*AccountincidentApi* | [**incident_router_add**](docs/AccountincidentApi.md#incident_router_add) | **POST** /account/incident/{incidentId}/comment | 
+*AccountincidentApi* | [**incident_router_count**](docs/AccountincidentApi.md#incident_router_count) | **GET** /account/incident/count | 
+*AccountincidentApi* | [**incident_router_create**](docs/AccountincidentApi.md#incident_router_create) | **POST** /account/incident/ | 
+*AccountincidentApi* | [**incident_router_get_all**](docs/AccountincidentApi.md#incident_router_get_all) | **GET** /account/incident/ | 
+*AccountincidentApi* | [**incident_router_get_all_comments**](docs/AccountincidentApi.md#incident_router_get_all_comments) | **GET** /account/incident/{incidentId}/comment | 
+*AccountincidentApi* | [**incident_router_get_incident**](docs/AccountincidentApi.md#incident_router_get_incident) | **GET** /account/incident/{incidentId} | 
+*AccountincidentApi* | [**incident_router_update**](docs/AccountincidentApi.md#incident_router_update) | **PUT** /account/incident/{incidentId} | 
 *AccountintegrationApi* | [**account_integration_router_count**](docs/AccountintegrationApi.md#account_integration_router_count) | **GET** /account/integration/count | 
 *AccountintegrationApi* | [**account_integration_router_create**](docs/AccountintegrationApi.md#account_integration_router_create) | **POST** /account/integration/{itype} | 
 *AccountintegrationApi* | [**account_integration_router_delete**](docs/AccountintegrationApi.md#account_integration_router_delete) | **DELETE** /account/integration/{itype} | 
@@ -121,6 +128,10 @@ Class | Method | HTTP request | Description
 *AccountmessageApi* | [**message_router_get_all_events_for_a_message_id**](docs/AccountmessageApi.md#message_router_get_all_events_for_a_message_id) | **GET** /account/message/{messageId}/events | 
 *AccountmessageApi* | [**message_router_get_all_events_for_a_message_id_from_a_node**](docs/AccountmessageApi.md#message_router_get_all_events_for_a_message_id_from_a_node) | **GET** /account/message/node/{messageId}/events | 
 *AccountmessageApi* | [**message_router_get_message_from_node**](docs/AccountmessageApi.md#message_router_get_message_from_node) | **GET** /account/message/node/{messageId} | 
+*AccountonboardingApi* | [**onboarding_router_get_onboarding_checklist**](docs/AccountonboardingApi.md#onboarding_router_get_onboarding_checklist) | **GET** /account/onboarding/checklist | 
+*AccountpaymentApi* | [**payment_router_create_customer_portal**](docs/AccountpaymentApi.md#payment_router_create_customer_portal) | **POST** /account/payment/portal | 
+*AccountpaymentApi* | [**payment_router_create_payment_subscription**](docs/AccountpaymentApi.md#payment_router_create_payment_subscription) | **POST** /account/payment/subscription | 
+*AccountpaymentApi* | [**payment_router_handle_payment_webhook**](docs/AccountpaymentApi.md#payment_router_handle_payment_webhook) | **POST** /account/payment/webhook | 
 *AccountrecipientApi* | [**recipient_router_get_all_messages_for_a_recipient**](docs/AccountrecipientApi.md#recipient_router_get_all_messages_for_a_recipient) | **GET** /account/recipient/{recipient}/messages | 
 *AccountrecipientApi* | [**recipient_router_get_all_messages_for_a_recipient_from_a_node**](docs/AccountrecipientApi.md#recipient_router_get_all_messages_for_a_recipient_from_a_node) | **GET** /account/recipient/node/{recipient}/messages | 
 *AccountsmtpstatApi* | [**s_mtp_stat_router_get_all_aggregate_ip_provider_smtp_stats**](docs/AccountsmtpstatApi.md#s_mtp_stat_router_get_all_aggregate_ip_provider_smtp_stats) | **GET** /account/smtp/stat/ip/{ipid}/provider/{pname}/aggregate | 
@@ -139,6 +150,14 @@ Class | Method | HTTP request | Description
 *AccountsubaccountApi* | [**sub_account_router_get**](docs/AccountsubaccountApi.md#sub_account_router_get) | **GET** /account/subaccount/{subAccountId} | 
 *AccountsubaccountApi* | [**sub_account_router_get_all**](docs/AccountsubaccountApi.md#sub_account_router_get_all) | **GET** /account/subaccount/ | 
 *AccountsubaccountApi* | [**sub_account_router_update**](docs/AccountsubaccountApi.md#sub_account_router_update) | **PUT** /account/subaccount/{subAccountId} | 
+*AccounttagApi* | [**tag_router_create**](docs/AccounttagApi.md#tag_router_create) | **POST** /account/tag/ | 
+*AccounttagApi* | [**tag_router_delete**](docs/AccounttagApi.md#tag_router_delete) | **DELETE** /account/tag/{tagid} | 
+*AccounttagApi* | [**tag_router_get_all**](docs/AccounttagApi.md#tag_router_get_all) | **GET** /account/tag/ | 
+*AccounttemplateApi* | [**account_template_router_create**](docs/AccounttemplateApi.md#account_template_router_create) | **POST** /account/template/ | 
+*AccounttemplateApi* | [**account_template_router_delete**](docs/AccounttemplateApi.md#account_template_router_delete) | **DELETE** /account/template/{templateid} | 
+*AccounttemplateApi* | [**account_template_router_get**](docs/AccounttemplateApi.md#account_template_router_get) | **GET** /account/template/{templateid} | 
+*AccounttemplateApi* | [**account_template_router_get_all**](docs/AccounttemplateApi.md#account_template_router_get_all) | **GET** /account/template/ | 
+*AccounttemplateApi* | [**account_template_router_update**](docs/AccounttemplateApi.md#account_template_router_update) | **PUT** /account/template/{templateid} | 
 *AccountvalidationApi* | [**validate_router_validate_email_bulk**](docs/AccountvalidationApi.md#validate_router_validate_email_bulk) | **POST** /account/validation/bulk | 
 *AccountvalidationApi* | [**validation_router_count**](docs/AccountvalidationApi.md#validation_router_count) | **GET** /account/validation/count | 
 *AccountvalidationApi* | [**validation_router_delete_validation**](docs/AccountvalidationApi.md#validation_router_delete_validation) | **DELETE** /account/validation/ | 
@@ -146,12 +165,13 @@ Class | Method | HTTP request | Description
 *AccountvalidationApi* | [**validation_router_validate_email_list**](docs/AccountvalidationApi.md#validation_router_validate_email_list) | **POST** /account/validation/ | 
 *AccountwebhookApi* | [**account_webhook_router_count**](docs/AccountwebhookApi.md#account_webhook_router_count) | **GET** /account/webhook/count | 
 *AccountwebhookApi* | [**account_webhook_router_create**](docs/AccountwebhookApi.md#account_webhook_router_create) | **POST** /account/webhook/ | 
-*AccountwebhookApi* | [**account_webhook_router_create_account_webhook_in_account_webhook_cache**](docs/AccountwebhookApi.md#account_webhook_router_create_account_webhook_in_account_webhook_cache) | **POST** /account/webhook/cache | 
 *AccountwebhookApi* | [**account_webhook_router_delete**](docs/AccountwebhookApi.md#account_webhook_router_delete) | **DELETE** /account/webhook/{webhookId} | 
-*AccountwebhookApi* | [**account_webhook_router_delete_account_webhook_in_account_webhook_cache**](docs/AccountwebhookApi.md#account_webhook_router_delete_account_webhook_in_account_webhook_cache) | **DELETE** /account/webhook/cache | 
 *AccountwebhookApi* | [**account_webhook_router_get**](docs/AccountwebhookApi.md#account_webhook_router_get) | **GET** /account/webhook/{webhookId} | 
 *AccountwebhookApi* | [**account_webhook_router_get_all**](docs/AccountwebhookApi.md#account_webhook_router_get_all) | **GET** /account/webhook/ | 
 *AccountwebhookApi* | [**account_webhook_router_update**](docs/AccountwebhookApi.md#account_webhook_router_update) | **PUT** /account/webhook/{webhookId} | 
+*ClusterApi* | [**cluster_router_delete_item_from_cache_of_every_node_in_cluster**](docs/ClusterApi.md#cluster_router_delete_item_from_cache_of_every_node_in_cluster) | **DELETE** /cluster/cache | 
+*ClusterApi* | [**cluster_router_delete_item_from_cache_of_specific_node_in_cluster**](docs/ClusterApi.md#cluster_router_delete_item_from_cache_of_specific_node_in_cluster) | **DELETE** /cluster/cache/node | 
+*EditorApi* | [**editor_api_router_get_token**](docs/EditorApi.md#editor_api_router_get_token) | **GET** /editor/ | 
 *SmtpApi* | [**s_mtp_router_receive_webhooks_raised_from_smtp_servers**](docs/SmtpApi.md#s_mtp_router_receive_webhooks_raised_from_smtp_servers) | **POST** /smtp/webhook | 
 *SubaccountdomainApi* | [**domain_router_count**](docs/SubaccountdomainApi.md#domain_router_count) | **GET** /subaccount/domain/count | 
 *SubaccountdomainApi* | [**domain_router_create**](docs/SubaccountdomainApi.md#domain_router_create) | **POST** /subaccount/domain/ | 
@@ -160,7 +180,10 @@ Class | Method | HTTP request | Description
 *SubaccountdomainApi* | [**domain_router_get_all**](docs/SubaccountdomainApi.md#domain_router_get_all) | **GET** /subaccount/domain/ | 
 *SubaccountdomainApi* | [**domain_router_update**](docs/SubaccountdomainApi.md#domain_router_update) | **PUT** /subaccount/domain/{domainId} | 
 *SubaccountdomainApi* | [**domain_router_verify**](docs/SubaccountdomainApi.md#domain_router_verify) | **POST** /subaccount/domain/{domainId}/verify | 
+*SubaccountdomainApi* | [**domain_router_verify_by_token**](docs/SubaccountdomainApi.md#domain_router_verify_by_token) | **POST** /subaccount/domain/{domainId}/verify/email/{token} | 
+*SubaccountdomainApi* | [**domain_router_verify_request**](docs/SubaccountdomainApi.md#domain_router_verify_request) | **POST** /subaccount/domain/{domainId}/verify/email | 
 *SubaccountemailApi* | [**email_router_send_email**](docs/SubaccountemailApi.md#email_router_send_email) | **POST** /subaccount/email/ | 
+*SubaccountemailApi* | [**email_router_send_email_with_template**](docs/SubaccountemailApi.md#email_router_send_email_with_template) | **POST** /subaccount/email/template | 
 *SubaccountippoolApi* | [**i_p_pool_router_count**](docs/SubaccountippoolApi.md#i_p_pool_router_count) | **GET** /subaccount/ippool/count | 
 *SubaccountippoolApi* | [**i_p_pool_router_create**](docs/SubaccountippoolApi.md#i_p_pool_router_create) | **POST** /subaccount/ippool/ | 
 *SubaccountippoolApi* | [**i_p_pool_router_delete**](docs/SubaccountippoolApi.md#i_p_pool_router_delete) | **DELETE** /subaccount/ippool/{ippoolid} | 
@@ -187,6 +210,7 @@ Class | Method | HTTP request | Description
 *SubaccountsuppressionApi* | [**suppression_router_delete_suppression**](docs/SubaccountsuppressionApi.md#suppression_router_delete_suppression) | **DELETE** /subaccount/suppression/ | 
 *SubaccountsuppressionApi* | [**suppression_router_delete_suppressions_in_suppression_filter**](docs/SubaccountsuppressionApi.md#suppression_router_delete_suppressions_in_suppression_filter) | **DELETE** /subaccount/suppression/filter | 
 *SubaccountsuppressionApi* | [**suppression_router_get_all_suppressions**](docs/SubaccountsuppressionApi.md#suppression_router_get_all_suppressions) | **GET** /subaccount/suppression/ | 
+*SystemApi* | [**system_template_router_get_all_system_templates**](docs/SystemApi.md#system_template_router_get_all_system_templates) | **GET** /system/template | 
 
 
 ## Documentation For Models
@@ -196,6 +220,7 @@ Class | Method | HTTP request | Description
  - [ModelsAIPStat](docs/ModelsAIPStat.md)
  - [ModelsAccount](docs/ModelsAccount.md)
  - [ModelsAccountIPPool](docs/ModelsAccountIPPool.md)
+ - [ModelsAccountTemplate](docs/ModelsAccountTemplate.md)
  - [ModelsAccountWebhook](docs/ModelsAccountWebhook.md)
  - [ModelsAlertLabel](docs/ModelsAlertLabel.md)
  - [ModelsAlertRequest](docs/ModelsAlertRequest.md)
@@ -204,26 +229,32 @@ Class | Method | HTTP request | Description
  - [ModelsBackOffConfiguration](docs/ModelsBackOffConfiguration.md)
  - [ModelsBackOffDecreaseType](docs/ModelsBackOffDecreaseType.md)
  - [ModelsBackOffTrigger](docs/ModelsBackOffTrigger.md)
+ - [ModelsBillingPortalSession](docs/ModelsBillingPortalSession.md)
  - [ModelsBlacklistStatus](docs/ModelsBlacklistStatus.md)
  - [ModelsBulkResponse](docs/ModelsBulkResponse.md)
  - [ModelsCity](docs/ModelsCity.md)
  - [ModelsCleanedList](docs/ModelsCleanedList.md)
+ - [ModelsComment](docs/ModelsComment.md)
  - [ModelsCountStat](docs/ModelsCountStat.md)
+ - [ModelsCustomerQuality](docs/ModelsCustomerQuality.md)
  - [ModelsDNSRecord](docs/ModelsDNSRecord.md)
  - [ModelsDeleteResponse](docs/ModelsDeleteResponse.md)
  - [ModelsDetailedAlert](docs/ModelsDetailedAlert.md)
  - [ModelsDomain](docs/ModelsDomain.md)
  - [ModelsEAccount](docs/ModelsEAccount.md)
  - [ModelsEAccountMember](docs/ModelsEAccountMember.md)
+ - [ModelsEComment](docs/ModelsEComment.md)
  - [ModelsEDomain](docs/ModelsEDomain.md)
  - [ModelsEIP](docs/ModelsEIP.md)
  - [ModelsEIPPool](docs/ModelsEIPPool.md)
+ - [ModelsEIncident](docs/ModelsEIncident.md)
  - [ModelsEIntegration](docs/ModelsEIntegration.md)
  - [ModelsEInvitation](docs/ModelsEInvitation.md)
  - [ModelsESender](docs/ModelsESender.md)
  - [ModelsESubAccount](docs/ModelsESubAccount.md)
  - [ModelsEValidation](docs/ModelsEValidation.md)
  - [ModelsEWebhook](docs/ModelsEWebhook.md)
+ - [ModelsEditorTokenResponse](docs/ModelsEditorTokenResponse.md)
  - [ModelsEmailErrorCode](docs/ModelsEmailErrorCode.md)
  - [ModelsEmailList](docs/ModelsEmailList.md)
  - [ModelsEmailMessage](docs/ModelsEmailMessage.md)
@@ -234,12 +265,18 @@ Class | Method | HTTP request | Description
  - [ModelsFrom](docs/ModelsFrom.md)
  - [ModelsGlockappsBlacklist](docs/ModelsGlockappsBlacklist.md)
  - [ModelsGlockappsMonitorStat](docs/ModelsGlockappsMonitorStat.md)
+ - [ModelsIEIP](docs/ModelsIEIP.md)
+ - [ModelsIEMember](docs/ModelsIEMember.md)
+ - [ModelsIESubAccount](docs/ModelsIESubAccount.md)
+ - [ModelsIETag](docs/ModelsIETag.md)
  - [ModelsIIP](docs/ModelsIIP.md)
  - [ModelsIP](docs/ModelsIP.md)
  - [ModelsIPPool](docs/ModelsIPPool.md)
  - [ModelsIPPoolType](docs/ModelsIPPoolType.md)
  - [ModelsIPStat](docs/ModelsIPStat.md)
  - [ModelsIPType](docs/ModelsIPType.md)
+ - [ModelsIncident](docs/ModelsIncident.md)
+ - [ModelsIncidentStatus](docs/ModelsIncidentStatus.md)
  - [ModelsInstance](docs/ModelsInstance.md)
  - [ModelsIntegration](docs/ModelsIntegration.md)
  - [ModelsIntegrationSettings](docs/ModelsIntegrationSettings.md)
@@ -250,7 +287,10 @@ Class | Method | HTTP request | Description
  - [ModelsMember](docs/ModelsMember.md)
  - [ModelsMemberRole](docs/ModelsMemberRole.md)
  - [ModelsNotificationType](docs/ModelsNotificationType.md)
+ - [ModelsOnboardingChecklist](docs/ModelsOnboardingChecklist.md)
  - [ModelsPIPStat](docs/ModelsPIPStat.md)
+ - [ModelsPaymentOptions](docs/ModelsPaymentOptions.md)
+ - [ModelsPaymentStatus](docs/ModelsPaymentStatus.md)
  - [ModelsQEmailMessage](docs/ModelsQEmailMessage.md)
  - [ModelsQEvent](docs/ModelsQEvent.md)
  - [ModelsRDSuppression](docs/ModelsRDSuppression.md)
@@ -273,9 +313,13 @@ Class | Method | HTTP request | Description
  - [ModelsSuppressionReason](docs/ModelsSuppressionReason.md)
  - [ModelsSystemDNSRecord](docs/ModelsSystemDNSRecord.md)
  - [ModelsSystemDomain](docs/ModelsSystemDomain.md)
+ - [ModelsSystemIPPool](docs/ModelsSystemIPPool.md)
+ - [ModelsSystemTemplate](docs/ModelsSystemTemplate.md)
+ - [ModelsTag](docs/ModelsTag.md)
  - [ModelsTo](docs/ModelsTo.md)
  - [ModelsValidation](docs/ModelsValidation.md)
  - [ModelsValidationReason](docs/ModelsValidationReason.md)
+ - [ModelsVerifyByTokenRequest](docs/ModelsVerifyByTokenRequest.md)
  - [ModelsWMessage](docs/ModelsWMessage.md)
  - [UaparserDevice](docs/UaparserDevice.md)
  - [UaparserOs](docs/UaparserOs.md)

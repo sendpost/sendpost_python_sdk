@@ -40,6 +40,7 @@ class ModelsEmailMessage(object):
         'pre_text': 'str',
         'reply_to': 'ModelsReplyTo',
         'subject': 'str',
+        'template': 'str',
         'text_body': 'str',
         'to': 'list[ModelsTo]',
         'track_clicks': 'bool',
@@ -56,13 +57,14 @@ class ModelsEmailMessage(object):
         'pre_text': 'preText',
         'reply_to': 'replyTo',
         'subject': 'subject',
+        'template': 'template',
         'text_body': 'textBody',
         'to': 'to',
         'track_clicks': 'trackClicks',
         'track_opens': 'trackOpens'
     }
 
-    def __init__(self, amp_body=None, _from=None, groups=None, headers=None, html_body=None, ippool=None, pre_text=None, reply_to=None, subject=None, text_body=None, to=None, track_clicks=None, track_opens=None):  # noqa: E501
+    def __init__(self, amp_body=None, _from=None, groups=None, headers=None, html_body=None, ippool=None, pre_text=None, reply_to=None, subject=None, template=None, text_body=None, to=None, track_clicks=None, track_opens=None):  # noqa: E501
         """ModelsEmailMessage - a model defined in Swagger"""  # noqa: E501
 
         self._amp_body = None
@@ -74,6 +76,7 @@ class ModelsEmailMessage(object):
         self._pre_text = None
         self._reply_to = None
         self._subject = None
+        self._template = None
         self._text_body = None
         self._to = None
         self._track_clicks = None
@@ -98,6 +101,8 @@ class ModelsEmailMessage(object):
             self.reply_to = reply_to
         if subject is not None:
             self.subject = subject
+        if template is not None:
+            self.template = template
         if text_body is not None:
             self.text_body = text_body
         if to is not None:
@@ -295,6 +300,27 @@ class ModelsEmailMessage(object):
         """
 
         self._subject = subject
+
+    @property
+    def template(self):
+        """Gets the template of this ModelsEmailMessage.  # noqa: E501
+
+
+        :return: The template of this ModelsEmailMessage.  # noqa: E501
+        :rtype: str
+        """
+        return self._template
+
+    @template.setter
+    def template(self, template):
+        """Sets the template of this ModelsEmailMessage.
+
+
+        :param template: The template of this ModelsEmailMessage.  # noqa: E501
+        :type: str
+        """
+
+        self._template = template
 
     @property
     def text_body(self):

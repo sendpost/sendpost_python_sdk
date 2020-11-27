@@ -40,7 +40,8 @@ class ModelsDomain(object):
         'return_path': 'ModelsDNSRecord',
         'return_path_verified': 'bool',
         'track': 'ModelsDNSRecord',
-        'track_verified': 'bool'
+        'track_verified': 'bool',
+        'verified': 'bool'
     }
 
     attribute_map = {
@@ -53,10 +54,11 @@ class ModelsDomain(object):
         'return_path': 'returnPath',
         'return_path_verified': 'returnPathVerified',
         'track': 'track',
-        'track_verified': 'trackVerified'
+        'track_verified': 'trackVerified',
+        'verified': 'verified'
     }
 
-    def __init__(self, created=None, dkim=None, dkim_config=None, dkim_verified=None, id=None, name=None, return_path=None, return_path_verified=None, track=None, track_verified=None):  # noqa: E501
+    def __init__(self, created=None, dkim=None, dkim_config=None, dkim_verified=None, id=None, name=None, return_path=None, return_path_verified=None, track=None, track_verified=None, verified=None):  # noqa: E501
         """ModelsDomain - a model defined in Swagger"""  # noqa: E501
 
         self._created = None
@@ -69,6 +71,7 @@ class ModelsDomain(object):
         self._return_path_verified = None
         self._track = None
         self._track_verified = None
+        self._verified = None
         self.discriminator = None
 
         if created is not None:
@@ -91,6 +94,8 @@ class ModelsDomain(object):
             self.track = track
         if track_verified is not None:
             self.track_verified = track_verified
+        if verified is not None:
+            self.verified = verified
 
     @property
     def created(self):
@@ -301,6 +306,27 @@ class ModelsDomain(object):
         """
 
         self._track_verified = track_verified
+
+    @property
+    def verified(self):
+        """Gets the verified of this ModelsDomain.  # noqa: E501
+
+
+        :return: The verified of this ModelsDomain.  # noqa: E501
+        :rtype: bool
+        """
+        return self._verified
+
+    @verified.setter
+    def verified(self, verified):
+        """Sets the verified of this ModelsDomain.
+
+
+        :param verified: The verified of this ModelsDomain.  # noqa: E501
+        :type: bool
+        """
+
+        self._verified = verified
 
     def to_dict(self):
         """Returns the model properties as a dict"""
