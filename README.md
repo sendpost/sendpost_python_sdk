@@ -9,7 +9,11 @@ Python &gt;&#x3D;3.7
 ## Installation & Usage
 ### pip install
 
-If the python package is hosted on a repository, you can install directly using:
+```sh
+pip install sendpost
+```
+
+Or you can install directly from git using:
 
 ```sh
 pip install git+https://github.com/sendpost/sendpost_python_sdk.git

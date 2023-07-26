@@ -13,7 +13,7 @@
 from setuptools import setup, find_packages  # noqa: H301
 
 NAME = "sendpost"
-VERSION = "1.0.0"
+VERSION = "1.0.2"
 # To install the library, run the following
 #
 # python setup.py install
@@ -34,8 +34,8 @@ setup(
     name=NAME,
     version=VERSION,
     description="SendPost API",
-    url = 'https://github.com/sednpost/sendpost_python_sdk',
-    download_url = 'https://github.com/sednpost/sendpost_python_sdk/archive/refs/tags/1.0.0.tar.gz',
+    url = 'https://github.com/sendpost/sendpost_python_sdk',
+    download_url = 'https://github.com/sendpost/sendpost_python_sdk/archive/refs/tags/1.0.0.tar.gz',
     author="Sendpost",
     author_email="dev@sendpost.io",
     keywords=["OpenAPI", "OpenAPI-Generator", "SendPost API"],
