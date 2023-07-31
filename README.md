@@ -74,37 +74,6 @@ with sendpost_python_sdk.ApiClient() as api_client:
         print("Exception when calling EmailApi->send_email: %s\n" % e)
 ```
 
-```python
-
-import sendpost_python_sdk
-from pprint import pprint
-from sendpost_python_sdk.apis.tags import email_api
-
-# Enter a context with an instance of the API client
-with sendpost_python_sdk.ApiClient() as api_client:
-    # Create an instance of the API class
-    api_instance = email_api.EmailApi(api_client)
-    x_sub_account_api_key = "your_api_key" # str | Sub-Account API Key
-    email = {
-      "from": {
-            "email": "richard@piedpiper.com",
-      },
-      "to": [
-        {
-          "email": "gavin@hooli.com",
-        }
-      ],
-      "subject": "Hello World",
-      "htmlBody": "<strong>it works!</strong>",
-      "ippool": "PiedPiper",
-    }
-    try:
-        api_response = api_instance.send_email(header_params={ 'X-SubAccount-ApiKey': x_sub_account_api_key}, body=email)
-        pprint(api_response)
-    except sendpost_python_sdk.ApiException as e:
-        print("Exception when calling EmailApi->send_email: %s\n" % e)
-```
-
 Example with cc, bcc and template:
 
 ```python
