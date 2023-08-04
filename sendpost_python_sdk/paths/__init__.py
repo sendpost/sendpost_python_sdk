@@ -8,3 +8,5 @@ import enum
 class PathValues(str, enum.Enum):
     SUBACCOUNT_EMAIL_ = "/subaccount/email/"
     SUBACCOUNT_EMAIL_TEMPLATE = "/subaccount/email/template"
+    SUBACCOUNT_SUPPRESSION_ = "/subaccount/suppression/"
+    SUBACCOUNT_SUPPRESSION_COUNT = "/subaccount/suppression/count"

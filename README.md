@@ -118,12 +118,18 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *EmailApi* | [**send_email**](docs/apis/tags/EmailApi.md#send_email) | **post** /subaccount/email/ | 
 *EmailApi* | [**send_email_with_template**](docs/apis/tags/EmailApi.md#send_email_with_template) | **post** /subaccount/email/template | 
+*SuppressionApi* | [**count**](docs/apis/tags/SuppressionApi.md#count) | **get** /subaccount/suppression/count | 
+*SuppressionApi* | [**create_suppressions**](docs/apis/tags/SuppressionApi.md#create_suppressions) | **post** /subaccount/suppression/ | 
+*SuppressionApi* | [**delete_suppression**](docs/apis/tags/SuppressionApi.md#delete_suppression) | **delete** /subaccount/suppression/ | 
+*SuppressionApi* | [**get_suppressions**](docs/apis/tags/SuppressionApi.md#get_suppressions) | **get** /subaccount/suppression/ | 
 
 ## Documentation For Models
 
  - [Attachment](docs/models/Attachment.md)
  - [City](docs/models/City.md)
  - [CopyTo](docs/models/CopyTo.md)
+ - [CountStat](docs/models/CountStat.md)
+ - [DeleteResponse](docs/models/DeleteResponse.md)
  - [Device](docs/models/Device.md)
  - [EmailMessage](docs/models/EmailMessage.md)
  - [EmailResponse](docs/models/EmailResponse.md)
@@ -132,7 +138,11 @@ Class | Method | HTTP request | Description
  - [Os](docs/models/Os.md)
  - [QEmailMessage](docs/models/QEmailMessage.md)
  - [QEvent](docs/models/QEvent.md)
+ - [RDSuppression](docs/models/RDSuppression.md)
+ - [RSuppression](docs/models/RSuppression.md)
  - [ReplyTo](docs/models/ReplyTo.md)
+ - [Suppression](docs/models/Suppression.md)
+ - [SuppressionEmail](docs/models/SuppressionEmail.md)
  - [To](docs/models/To.md)
  - [UserAgent](docs/models/UserAgent.md)
  - [WebhookEvent](docs/models/WebhookEvent.md)

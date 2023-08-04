@@ -1,10 +1,7 @@
 # do not import all endpoints into this module because that uses a lot of memory and stack frames
 # if you need the ability to import all endpoints from this module, import them with
-# from sendpost_python_sdk.apis.tag_to_api import tag_to_api
+# from sendpost_python_sdk.paths.subaccount_suppression_ import Api
 
-import enum
+from sendpost_python_sdk.paths import PathValues
 
-
-class TagValues(str, enum.Enum):
-    EMAIL = "email"
-    SUPPRESSION = "suppression"
+path = PathValues.SUBACCOUNT_SUPPRESSION_
