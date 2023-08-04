@@ -68,7 +68,7 @@ with sendpost_python_sdk.ApiClient() as api_client:
       "ippool": "PiedPiper",
     }
     try:
-        api_response = api_instance.send_email(header_params={ 'X-SubAccount-ApiKey': x_sub_account_api_key}, body=email)
+        api_response = api_instance.send_email(header_params={ "X-SubAccount-ApiKey": x_sub_account_api_key}, body=email)
         pprint(api_response)
     except sendpost_python_sdk.ApiException as e:
         print("Exception when calling EmailApi->send_email: %s\n" % e)
@@ -104,10 +104,124 @@ with sendpost_python_sdk.ApiClient() as api_client:
       "ippool": "PiedPiper",
     }
     try:
-        api_response = api_instance.send_email_with_template(header_params={ 'X-SubAccount-ApiKey': x_sub_account_api_key}, body=email)
+        api_response = api_instance.send_email_with_template(header_params={ "X-SubAccount-ApiKey": x_sub_account_api_key}, body=email)
         pprint(api_response)
     except sendpost_python_sdk.ApiException as e:
         print("Exception when calling EmailApi->send_email: %s\n" % e)
+```
+
+Create Suppressions
+
+```python
+import sendpost_python_sdk
+from pprint import pprint
+from sendpost_python_sdk.apis.tags import suppression_api
+from sendpost_python_sdk.model import r_suppression
+
+with sendpost_python_sdk.ApiClient() as api_client:
+    api_instance = suppression_api.SuppressionApi(api_client)
+    x_sub_account_api_key = "your_api_key"
+
+    hardBounce = [{ "email": "richard@piedpiper_fake.com" }]
+
+
+    # fields are optional, but you have to send at least one of them.
+    # manual = [{ "email": "richard@piedpiper_fake2.com" }]
+    # spamComplaint = [{ "email": "richard@piedpiper_fake3.com" }]
+    # unsubscribe = [{ "email": "richard@piedpiper_fake4.com" }]
+
+    r_suppression = r_suppression.RSuppression(
+      hardBounce = hardBounce
+    )
+
+    # example with all fields
+    # r_suppression = r_suppression.RSuppression(
+    #   hardBounce = hardBounce,
+    #   manual = manual,
+    #   spamComplaint = spamComplaint,
+    #   unsubscribe = unsubscribe
+    # )
+
+    try:
+        api_response = api_instance.create_suppressions(header_params={ "X-SubAccount-ApiKey": x_sub_account_api_key}, body=r_suppression)
+        pprint(api_response)
+    except sendpost_python_sdk.ApiException as e:
+        print("Exception when calling SuppressionApi->create_suppressions: %s\n" % e)
+```
+
+Get Suppressions
+
+```python
+import sendpost_python_sdk
+from pprint import pprint
+from sendpost_python_sdk.apis.tags import suppression_api
+
+with sendpost_python_sdk.ApiClient() as api_client:
+    api_instance = suppression_api.SuppressionApi(api_client)
+    x_sub_account_api_key = "your_api_key"
+
+    options = {
+        "offset": 0,
+        "limit": 10,
+        "from": "2023-06-07",
+        "to": "2023-08-03"
+    }
+
+    try:
+        api_response = api_instance.get_suppressions(header_params={ "X-SubAccount-ApiKey": x_sub_account_api_key}, query_params=options)
+        pprint(api_response)
+    except sendpost_python_sdk.ApiException as e:
+        print("Exception when calling SuppressionApi->get_suppressions: %s\n" % e)
+```
+
+Delete Suppression
+
+```python
+import sendpost_python_sdk
+from pprint import pprint
+from sendpost_python_sdk.apis.tags import suppression_api
+from sendpost_python_sdk.model import rd_suppression
+
+with sendpost_python_sdk.ApiClient() as api_client:
+    api_instance = suppression_api.SuppressionApi(api_client)
+    x_sub_account_api_key = "your_api_key"
+
+    suppressions = [{"email": "richard@piedpiper_fake.com"}]
+
+    rd_suppression = rd_suppression.RDSuppression(suppressions=suppressions)
+
+    try:
+        api_response = api_instance.delete_suppression(
+            header_params={"X-SubAccount-ApiKey": x_sub_account_api_key},
+            body=rd_suppression)
+        pprint(api_response)
+    except sendpost_python_sdk.ApiException as e:
+        print(
+            "Exception when calling SuppressionApi->delete_suppression: %s\n" %
+            e)
+```
+
+Count Suppressions
+
+```python
+import sendpost_python_sdk
+from pprint import pprint
+from sendpost_python_sdk.apis.tags import suppression_api
+
+with sendpost_python_sdk.ApiClient() as api_client:
+    api_instance = suppression_api.SuppressionApi(api_client)
+    x_sub_account_api_key = "your_api_key"
+
+    options = {
+        "from": "2023-06-07",
+        "to": "2023-08-03"
+    }
+
+    try:
+        api_response = api_instance.count(header_params={ "X-SubAccount-ApiKey": x_sub_account_api_key}, query_params=options)
+        pprint(api_response)
+    except sendpost_python_sdk.ApiException as e:
+        print("Exception when calling SuppressionApi->count: %s\n" % e)
 ```
 
 ## Documentation for API Endpoints
